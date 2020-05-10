@@ -35,8 +35,10 @@
                     top: 200px;
                     width: 100%;
                     left:40%;
+               }
+               #heartImg {
                     margin: auto;
-                    border: solid black;
+                    top: 200px;
                }
                #button {
                     position: relative;
@@ -80,14 +82,14 @@
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
-                         heart.style.width+=10px;
+                         heart.style.width = (heart.clientWidth+10) + "px";
                          clickHeart.style.backgroundColor="blue";
                     }
                     else {
                          if (clicks%2==0)
-                              heart.style.width-=10px;
+                              heart.style.width = (heart.clientWidth-10) + "px";
                          else {
-                              heart.style.width+=10px;
+                              heart.style.width = (heart.clientWidth+10) + "px";
                          }
                     }
                }
