@@ -1,7 +1,7 @@
 <html>
      <head>
           <meta charset = "utf-8">
-          <title>Testing Javascript</title>
+          <title>Happy Mother's Day!</title>
           <style>
                #topRect {
                     height: 400px;
@@ -14,6 +14,16 @@
                     color: black;
                     line-height: 4;
                }
+               #clickHeart {
+                    font-size: 30;
+                    text-align: center;
+                    margin: auto;
+               }
+               #heart {
+                    position: relative;
+                    width: 200px;
+                    left:40%;
+               }
                #button {
                     position: relative;
                     top: 500px;
@@ -25,28 +35,50 @@
           </style>
      </head>
      <body>
-          <div id="topRect">Happy Mother's Day!</div>
+          <div id="topRect">Happy Mother's Day! <span style="font-size:50px"><br>From Justina</span></div>
+          <div id="clickHeart">Click the heart!</div>
           <div id="heart"> 
+               <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490154-9ac51b00-924c-11ea-8086-b12040f31762.png">
           </div>
           <button id="button">Button</button>
           <script>
-               var count = 0;
-               var button = document.getElementById("button");
+//                var count = 0;
+//                var button = document.getElementById("button");
+//                var onClick = function() {
+//                     count++;
+//                     button.textContent = "Clicked " + count + " time" + (count>0 ? "s" : "");
+//                     if (count>=5 & count<10) button.style.backgroundColor = "red";
+//                     else if (count>=10) button.style.backgroundColor = "blue";
+//                }
+//                var onHover = function() {
+//                     button.style.border = "3px solid black";
+//                }
+//                var offHover = function() {
+//                     button.style.border = "0px";
+//                }
+//                button.addEventListener("click",onClick);
+//                button.addEventListener("mouseover",onHover);
+//                button.addEventListener("mouseleave",offHover);
+               
+               
+               var clicks = 0;
+               var heart = document.getElementById("heart");
                var onClick = function() {
-                    count++;
-                    button.textContent = "Clicked " + count + " time" + (count>0 ? "s" : "");
-                    if (count>=5 & count<10) button.style.backgroundColor = "red";
-                    else if (count>=10) button.style.backgroundColor = "blue";
+                    clicks++;
+                    if(clicks<=5) {
+                         heart.style.width+=10px;
+                         heart.style.backgroundColor="blue";
+                    }
+                    else {
+                         if (clicks%2==0)
+                              heart.style.width-=10px;
+                         else {
+                              heart.style.width+=10px;
+                         }
+                    }
                }
-               var onHover = function() {
-                    button.style.border = "3px solid black";
-               }
-               var offHover = function() {
-                    button.style.border = "0px";
-               }
-               button.addEventListener("click",onClick);
-               button.addEventListener("mouseover",onHover);
-               button.addEventListener("mouseleave",offHover);
+               heart.addEventListener("click",onClick);
+               
           </script>
      </body>
 </html>
