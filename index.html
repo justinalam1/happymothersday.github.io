@@ -28,16 +28,16 @@
                     text-align: center;
                     margin: auto;
                }
-               #heart {
+/*                #heart {
                     position: relative;
                     width: 200px;
                     left:40%;
                     margin: auto;
                     border: solid black 4px;
-               }
+               } */
                #heartImg {
-                    max-width: 100%;
-                    height: auto;
+                    width: 300px;
+/*                     height: auto; */
                     margin: auto;
                }
                #button {
@@ -54,9 +54,7 @@
           <div id="topRect">Happy Mother's Day!</div>
           <div id="subtitle">From Justina</div>
           <div id="clickHeart>Click the heart!</div>
-          <div id="heart"> 
-               <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490154-9ac51b00-924c-11ea-8086-b12040f31762.png">
-          </div>
+          <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490154-9ac51b00-924c-11ea-8086-b12040f31762.png">
           <button id="button">Button</button>
           <script>
 //                var count = 0;
@@ -80,7 +78,7 @@
                
                var clicks = 0;
                var clickHeart = document.getElementById("clickHeart");
-               var heart = document.getElementById("heart");
+               var heart = document.getElementById("heartImg");
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
