@@ -56,20 +56,20 @@
           </div> 
           <script>
                var clicks = 0;
-               var heart = document.getElementById("heart");
                var clickHeart = document.getElementById("clickHeart");
+               var heart = document.getElementById("heart");
                var heartImg = document.getElementById("heartImg");
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
-                         heart.style.width = (heart.clientWidth+5) + "%";
+                         heartImg.style.width = (heartImg.clientWidth+5) + "%";
                          clickHeart.style.backgroundColor="blue";
                     }
                     else {
                          if (clicks%2==0)
-                              heart.style.width = (heart.clientWidth-5) + "%";
+                              heartImg.style.width = (heartImg.clientWidth-5) + "%";
                          else {
-                              heart.style.width = (heart.clientWidth+5) + "%";
+                              heartImg.style.width = (heartImg.clientWidth+5) + "%";
                          }
                     }
                }
