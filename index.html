@@ -20,6 +20,7 @@
                     top: 250px;
                     background-color:"none";
                     font-family: 'Courier New', Courier, monospace;
+                    font-size: 50;
                     color: black;
                     text-align:center;
                }
@@ -28,17 +29,13 @@
                     text-align: center;
                     margin: auto;
                }
-/*                #heart {
+               #heart {
                     position: relative;
+                    top:100px;
                     width: 200px;
-                    left:40%;
+                    left:20%;
                     margin: auto;
                     border: solid black 4px;
-               } */
-               #heartImg {
-                    width: 300px;
-/*                     height: auto; */
-                    margin: auto;
                }
                #button {
                     position: relative;
@@ -54,7 +51,9 @@
           <div id="topRect">Happy Mother's Day!</div>
           <div id="subtitle">From Justina</div>
           <div id="clickHeart>Click the heart!</div>
-          <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490154-9ac51b00-924c-11ea-8086-b12040f31762.png">
+          <div id="heart">
+               <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490457-8edb5800-9250-11ea-96da-ab0064a52c25.png">
+          </div> 
           <button id="button">Button</button>
           <script>
 //                var count = 0;
@@ -74,8 +73,6 @@
 //                button.addEventListener("click",onClick);
 //                button.addEventListener("mouseover",onHover);
 //                button.addEventListener("mouseleave",offHover);
-               
-               
                var clicks = 0;
                var clickHeart = document.getElementById("clickHeart");
                var heart = document.getElementById("heartImg");
