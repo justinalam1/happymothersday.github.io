@@ -35,15 +35,11 @@
                     position: relative;
                     width: 100%;
                }
-               #heartImg {
-                    left: 40%;
-                    width: 20%;
-               }
                .center {
                  display: block;
                  margin-left: auto;
                  margin-right: auto;
-                 width: 50%;
+                 width: 200px;
                }
           </style>
      </head>
@@ -62,14 +58,14 @@
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
-                         heartImg.style.width = (heartImg.clientWidth+5) + "%";
+                         heartImg.style.width = (heartImg.clientWidth+10) + "px";
                          clickHeart.style.backgroundColor="blue";
                     }
                     else {
                          if (clicks%2==0)
-                              heartImg.style.width = (heartImg.clientWidth-5) + "%";
+                              heartImg.style.width = (heartImg.clientWidth-10) + "px";
                          else {
-                              heartImg.style.width = (heartImg.clientWidth+5) + "%";
+                              heartImg.style.width = (heartImg.clientWidth+10) + "px";
                          }
                     }
                }
