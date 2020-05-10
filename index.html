@@ -53,23 +53,21 @@
           <script>
                var clicks = 0;
                var clickHeart = document.getElementById("clickHeart");
-               var heart = document.getElementById("heart");
                var heartImg = document.getElementById("heartImg");
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
-                         heartImg.style.width = (heartImg.clientWidth+10) + "px";
+                         heartImg.style.width = (heartImg.clientWidth+20) + "px";
                          clickHeart.style.backgroundColor="blue";
                     }
                     else {
                          if (clicks%2==0)
-                              heartImg.style.width = (heartImg.clientWidth-10) + "px";
+                              heartImg.style.width = (heartImg.clientWidth-20) + "px";
                          else {
-                              heartImg.style.width = (heartImg.clientWidth+10) + "px";
+                              heartImg.style.width = (heartImg.clientWidth+20) + "px";
                          }
                     }
                }
-               heart.addEventListener("click",onClick);
                heartImg.addEventListener("click",onClick);
           </script>
      </body>
