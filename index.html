@@ -26,6 +26,7 @@
                     text-align:center;
                }
                #clickHeart {
+                    position: relative;
                     font-size: 30;
                     text-align: center;
                     margin: auto;
@@ -39,7 +40,8 @@
                #heartImg {
                     position: relative;
                     margin: auto;
-                    top: 200px;
+                    left: 20%;
+                    width: 30%;
                }
                #button {
                     position: relative;
@@ -60,30 +62,13 @@
           </div> 
           <button id="button">Button</button>
           <script>
-//                var count = 0;
-//                var button = document.getElementById("button");
-//                var onClick = function() {
-//                     count++;
-//                     button.textContent = "Clicked " + count + " time" + (count>0 ? "s" : "");
-//                     if (count>=5 & count<10) button.style.backgroundColor = "red";
-//                     else if (count>=10) button.style.backgroundColor = "blue";
-//                }
-//                var onHover = function() {
-//                     button.style.border = "3px solid black";
-//                }
-//                var offHover = function() {
-//                     button.style.border = "0px";
-//                }
-//                button.addEventListener("click",onClick);
-//                button.addEventListener("mouseover",onHover);
-//                button.addEventListener("mouseleave",offHover);
                var clicks = 0;
                var clickHeart = document.getElementById("clickHeart");
                var heart = document.getElementById("heart");
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
-                         heart.style.width = (heart.clientWidth+10) + "px";
+                         heart.style.width = "50%";
                          clickHeart.style.backgroundColor="blue";
                     }
                     else {
