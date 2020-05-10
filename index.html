@@ -33,7 +33,6 @@
                }
                #heart {
                     position: relative;
-                    top: 200px;
                     width: 100%;
                }
                #heartImg {
@@ -63,14 +62,14 @@
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
-                         heart.style.width = (heart.clientWidth+10) + "px";
+                         heart.style.width = (heart.clientWidth+5) + "%";
                          clickHeart.style.backgroundColor="blue";
                     }
                     else {
                          if (clicks%2==0)
-                              heart.style.width = (heart.clientWidth-10) + "px";
+                              heart.style.width = (heart.clientWidth-5) + "%";
                          else {
-                              heart.style.width = (heart.clientWidth+10) + "px";
+                              heart.style.width = (heart.clientWidth+5) + "%";
                          }
                     }
                }
