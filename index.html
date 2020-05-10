@@ -51,19 +51,19 @@
      <body>
           <div id="topRect">Happy Mother's Day!</div>
           <div id="subtitle">From Justina</div>
-          <div id="clickHeart>Click the heart!</div>
+          <div id="clickHeart">Click the heart!</div>
           <div id="heart">
                <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490457-8edb5800-9250-11ea-96da-ab0064a52c25.png" class="center">
           </div> 
           <script>
                var clicks = 0;
-               var clickHeart = document.getElementById("clickHeart");
                var heart = document.getElementById("heart");
+               var clickHeart = document.getElementById("clickHeart");
                var heartImg = document.getElementById("heartImg");
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
-                         heart.style.width = "60%";
+                         heart.style.width = (heart.clientWidth+10) + "px";
                          clickHeart.style.backgroundColor="blue";
                     }
                     else {
