@@ -14,6 +14,15 @@
                     color: black;
                     line-height: 4;
                }
+               #subtitle {
+                    position: absolute;
+                    margin: auto;
+                    top: 250px;
+                    background-color:"none";
+                    font-family: 'Courier New', Courier, monospace;
+                    color: black;
+                    text-align:center;
+               }
                #clickHeart {
                     font-size: 30;
                     text-align: center;
@@ -23,6 +32,13 @@
                     position: relative;
                     width: 200px;
                     left:40%;
+                    margin: auto;
+                    border: solid black 4px;
+               }
+               #heartImg {
+                    max-width: 100%;
+                    height: auto;
+                    margin: auto;
                }
                #button {
                     position: relative;
@@ -35,8 +51,9 @@
           </style>
      </head>
      <body>
-          <div id="topRect">Happy Mother's Day! <span style="font-size:50px"><br>From Justina</span></div>
-          <div id="clickHeart">Click the heart!</div>
+          <div id="topRect">Happy Mother's Day!</div>
+          <div id="subtitle">From Justina</div>
+          <div id="clickHeart>Click the heart!</div>
           <div id="heart"> 
                <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490154-9ac51b00-924c-11ea-8086-b12040f31762.png">
           </div>
@@ -62,12 +79,13 @@
                
                
                var clicks = 0;
+               var clickHeart = document.getElementById("clickHeart");
                var heart = document.getElementById("heart");
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
                          heart.style.width+=10px;
-                         heart.style.backgroundColor="blue";
+                         clickHeart.style.backgroundColor="blue";
                     }
                     else {
                          if (clicks%2==0)
