@@ -37,6 +37,7 @@
                     left:40%;
                }
                #heartImg {
+                    position: relative;
                     margin: auto;
                     top: 200px;
                }
@@ -55,7 +56,7 @@
           <div id="subtitle">From Justina</div>
           <div id="clickHeart>Click the heart!</div>
           <div id="heart">
-               <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490457-8edb5800-9250-11ea-96da-ab0064a52c25.png">
+               <img id="heartImg" src="https://user-images.githubusercontent.com/65101372/81490457-8edb5800-9250-11ea-96da-ab0064a52c25.png" class="center">
           </div> 
           <button id="button">Button</button>
           <script>
@@ -78,7 +79,7 @@
 //                button.addEventListener("mouseleave",offHover);
                var clicks = 0;
                var clickHeart = document.getElementById("clickHeart");
-               var heart = document.getElementById("heartImg");
+               var heart = document.getElementById("heart");
                var onClick = function() {
                     clicks++;
                     if(clicks<=5) {
